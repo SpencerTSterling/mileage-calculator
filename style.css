@@ -1,0 +1,269 @@
+/* -------------------------
+   BASE
+-------------------------- */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 40px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6f8;
+    color: #1f2937;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin-top: 0;
+}
+
+h1 {
+    color: #18283f;
+    margin-bottom: 28px;
+}
+
+h2 {
+    color: #263d5a;
+    margin-top: 30px;
+}
+
+
+/* -------------------------
+   MAIN CONTAINERS
+-------------------------- */
+
+#formPage,
+#resultsPage {
+    max-width: 850px;
+    margin: 0 auto;
+    background: white;
+    padding: 36px;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+}
+
+
+/* -------------------------
+   FORM FIELDS
+-------------------------- */
+
+label {
+    display: block;
+    margin-bottom: 1%;
+    margin-top: 1%;
+    font-weight: 600;
+    color: #374151;
+}
+
+input {
+    width: 100%;
+    padding: 11px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 15px;
+    background: white;
+}
+
+input:focus {
+    outline: none;
+    border-color: #476f9f;
+    box-shadow: 0 0 0 3px rgba(71, 111, 159, 0.15);
+}
+
+
+/* -------------------------
+   PROVIDER CARDS
+-------------------------- */
+
+.provider {
+    position: relative;
+    padding: 24px;
+    margin-bottom: 18px;
+    border: 1px solid #d9e0e7;
+    border-radius: 9px;
+    background: #fafbfc;
+}
+
+.removeProviderButton {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+
+    width: 32px;
+    height: 32px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: transparent;
+    color: #6b7280;
+
+    font-size: 22px;
+    line-height: 28px;
+
+    cursor: pointer;
+}
+
+.removeProviderButton:hover {
+    background: #edf0f3;
+    color: #b42318;
+}
+
+
+/* -------------------------
+   BUTTONS
+-------------------------- */
+
+button {
+    font-family: inherit;
+}
+
+#addProviderButton {
+    padding: 10px 16px;
+    border: 1px solid #476f9f;
+    border-radius: 6px;
+
+    background: white;
+    color: #365d89;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+#addProviderButton:hover {
+    background: #eef4fa;
+}
+
+#calculateButton {
+    width: 100%;
+    padding: 13px 18px;
+
+    border: none;
+    border-radius: 7px;
+
+    background: #263d5a;
+    color: white;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+#calculateButton:hover {
+    background: #1d3049;
+}
+
+#modifyButton {
+    padding: 10px 18px;
+
+    border: 1px solid #476f9f;
+    border-radius: 6px;
+
+    background: white;
+    color: #365d89;
+
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#modifyButton:hover {
+    background: #eef4fa;
+}
+
+
+/* -------------------------
+   FORM STATUS
+-------------------------- */
+
+#formMessage {
+    margin-top: 16px;
+    font-size: 14px;
+    color: #536171;
+}
+
+
+/* -------------------------
+   RESULTS
+-------------------------- */
+
+#report {
+    line-height: 1.6;
+}
+
+#report h1 {
+    padding-bottom: 14px;
+    border-bottom: 2px solid #263d5a;
+}
+
+#report h2 {
+    margin-top: 30px;
+    margin-bottom: 16px;
+}
+
+.providerResult {
+    padding: 2%;
+    border-bottom: 1px solid #dde3e9;
+    border-top: 1px solid #dde3e9;
+}
+
+.providerResult p {
+    margin: 5px 0;
+}
+
+#report hr {
+    border: none;
+    border-top: 2px solid #263d5a;
+    margin: 26px 0 20px;
+}
+
+
+/* -------------------------
+   SMALL SCREENS
+-------------------------- */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 20px 10px;
+    }
+
+    #formPage,
+    #resultsPage {
+        padding: 22px;
+    }
+
+    .provider {
+        padding: 20px;
+    }
+}
+
+
+/* -------------------------
+   PRINTING
+-------------------------- */
+
+@media print {
+
+    body {
+        background: white;
+        padding: 0;
+    }
+
+    #resultsPage {
+        max-width: none;
+        padding: 0;
+        box-shadow: none;
+    }
+
+    #modifyButton {
+        display: none;
+    }
+
+}

@@ -1,0 +1,98 @@
+<head>
+    <meta charset="UTF-8">
+    <title>Mileage Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- FORM PAGE -->
+    <div id="formPage">
+
+        <h1>Mileage Calculator</h1>
+
+        <label>Client Name</label>
+        <input id="clientName" type="text">
+
+
+
+        <label>Starting Address</label>
+        <input id="startAddress" type="text">
+
+
+
+        <label>Mileage Rate</label>
+        <input
+            id="mileageRate"
+            type="number"
+            step="0.001"
+        >
+
+
+
+        <h2>Providers</h2>
+
+        <div id="providersContainer">
+
+            <!-- FIRST PROVIDER -->
+            <div class="provider">
+
+                <button
+                    type="button"
+                    class="removeProviderButton"
+                    title="Remove Provider"
+                >
+                    x
+                </button>
+
+
+                <label>Provider Name</label>
+                <input class="providerName" type="text">
+
+                <label>Provider Address</label>
+                <input class="providerAddress" type="text">
+
+
+                <label>Appointments</label>
+                <input
+                    class="appointments"
+                    type="number"
+                    min="1"
+                >
+
+            </div>
+
+        </div>
+
+        <br>
+
+        <button id="addProviderButton" type="button">
+            + Add Provider
+        </button>
+
+        <br><br>
+
+        <button id="calculateButton" type="button">
+            Calculate Mileage
+        </button>
+
+        <p id="formMessage"></p>
+
+    </div>
+
+
+    <!-- RESULTS PAGE -->
+    <div id="resultsPage" hidden>
+
+        <div id="report"></div>
+
+        <button id="modifyButton" type="button">
+            Modify Information
+        </button>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
